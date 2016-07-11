@@ -1,0 +1,43 @@
+{
+  "name": "五樓去哪兒~",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "description": "對PTT的推文做編號",
+  "icons": {
+    "16": "icon128.png",
+    "48": "icon128.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js", "jquery-2.0.0.min.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icon19.png",
+    "default_title": "五樓去哪兒~"
+  },
+  "permissions": [
+    "tabs",
+    "http://localhost/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.ptt.cc/*"
+      ],
+      "css": [
+        "inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.ptt.cc/*"
+      ],
+      "js": [
+        "jquery-2.0.0.min.js","inject.js"
+      ]
+    }
+  ]
+}
