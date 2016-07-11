@@ -1,0 +1,2 @@
+# ChromeExtensionForPTT
+做一個chrome extension可以對PTT的推文做編號
